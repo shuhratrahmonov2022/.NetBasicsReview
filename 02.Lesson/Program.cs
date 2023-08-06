@@ -7,15 +7,26 @@ namespace lesson2
         static void Main(string[] args)
         {
             int age;
-            Console.Write("Enter your age: ");
-            age = Convert.ToInt32(Console.ReadLine());
-            if (age <= 12)
+            try
             {
-                Console.WriteLine("Yo do not access!");
+                Console.Write("Enter your age: ");
+                age = Convert.ToInt32(Console.ReadLine());
+                if (age <= 12)
+                {
+                    Console.WriteLine("Yo do not access!");
+                }
+                else
+                {
+                    Console.WriteLine("Welcome!");
+                }
             }
-            else
+            catch (DivideByZeroException dex)
             {
-                Console.WriteLine("Welcome!");
+                Console.WriteLine(dex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
     }
