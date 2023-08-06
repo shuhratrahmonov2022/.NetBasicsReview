@@ -28,7 +28,6 @@ namespace lesson2
             {
                 Console.WriteLine(ex.Message);
             }
-
         }
     }
 }
