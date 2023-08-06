@@ -17,7 +17,7 @@ namespace lesson2
                 }
                 else
                 {
-                    Console.WriteLine("Welcome");
+                    Console.WriteLine("Welcome!");
                 }
             }
             catch (DivideByZeroException dex)
